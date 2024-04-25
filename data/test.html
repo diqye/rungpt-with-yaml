@@ -1,0 +1,2293 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+		
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>星座命盘查询结果【桌机版】 - 占星之门</title>
+	<meta name="keywords" content="星座命盘,星盘,占星之门" />
+	<meta name="description" content="占星之门星盘查询结果，桌机版涵盖行星、星座、宫位、相位、上升星座、法达运势、星座统计、古典占星等内容，免登入、随时查、不用钱。">
+	<meta name="copyright" content="占星之门">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-index.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest-astrodoor.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	
+<style>
+
+html, body, div, span, h1, h2, h3, p, a, img, ol, ul, li, form, table, tbody, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	-mox-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 微軟正黑體, 'Microsoft JhengHei', "Lucida Grande", "Lucida Sans Unicode",  Arial, Helvetica, sans-serif;
+	background: #FFFFFF;
+	color: #4C4C4C;
+	font-size: 1em;
+}
+
+/* Main Structure */
+
+#container {
+	margin: 0 auto;
+	width: 100%;
+}
+
+#header {
+	margin-bottom: 1.5em;
+}
+
+#footer {
+	margin-top: 2.5em;
+	padding: 1em 0.625em 2em 0.625em;
+	border-top: 1px dashed #cccccc;
+	text-align: center;
+}
+
+/* header */
+
+#mobile_bar {
+	padding: 1.25em 0.875em;
+	letter-spacing: 1px;
+	background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+#mobile_bar a {
+	color: #333333;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+#mobile_left {
+	float: left;
+	font-size: 1.5em;
+}
+
+#mobile_right {
+	float: right;
+	font-size: 1.5em;
+}
+
+#mobile_clear {
+	clear: both;
+}
+
+#menu {
+	display: none;
+	margin: 0 0 1em 0;
+}
+
+.nav {
+	text-align: left;
+	font-size: 1em;
+	padding: 1em 0.625em;
+	color: #333333;
+	border-bottom: 1px dashed #8E8E8E;
+}
+
+.nav li {
+	display: inline;
+	margin: 0 0.5em;
+	white-space: nowrap;
+	line-height: 2;
+}
+
+.nav a {
+	color: #333333;
+	text-decoration: none;
+	word-break: keep-all;
+}
+
+.nav_title {
+	color: #FA007A;
+}
+
+.hamburger {
+	background: #FFFFFF;
+	padding: 0 6px 2px 6px;
+	border-radius: 0.25em;
+}
+
+/* footer */
+
+#footer li {
+	display: inline;
+	margin: 0 0.375em;
+	white-space: nowrap;
+	line-height: 1.8;
+}
+
+#footer a {
+	color: #4C4C4C;
+	text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+	#mobile_bar {
+		border-bottom-left-radius: 1em;
+		border-bottom-right-radius: 1em;
+		padding: 1.125em;
+		margin-bottom: 0.375em;
+	}
+
+	#mobile_bar a:hover {
+		color: #0088CC;
+	}
+
+	#mobile_left {
+		font-size: 2em;
+	}
+
+	#menu {
+		display: block;
+	}
+
+	.nav {
+		padding: 0.375em 0.5em;
+	}
+
+	.nav a:hover {
+		color: #0088CC;
+		text-decoration: underline;
+	}
+
+	#footer a:hover {
+		color: #0088CC;
+		text-decoration: underline;
+	}
+}
+
+/* main */
+
+#main {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 0.9375em;
+}
+
+a {
+	color: #0088CC;
+	text-decoration: none;
+	margin: 0 2px;
+}
+
+a:hover {
+	color: #0088CC;
+	text-decoration: underline;
+	margin: 0 2px;
+}
+
+h1 {
+	margin: 1em 0;
+	font-size: 1em;
+	font-weight: normal;
+	color: #333333;
+}
+
+h3 {
+	margin: 1em 0;
+	padding: 0 0 0 0.625em;
+	font-size: 1.125em;
+	font-weight: 500;
+	color: #333333;
+	border-left: 3px solid #FF6600;
+}
+
+#colOne {
+	float: left;
+	width: 440px;
+	margin: 1em 0 3em 0;
+}
+
+#colOne p {
+	margin: 0.5em 0;
+	line-height: 1.8;
+}
+
+#imgout {
+	max-width: 100%;
+	height: auto;
+}
+
+#colTwo {
+	float: right;
+	width: 510px;
+	margin: 1em 0 3em 0;
+}
+
+#colTwo p {
+	margin: 1em 0;
+	line-height: 1.8;
+}
+
+#colTwo img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 1em;
+}
+
+.msg_star {
+	color: #FA007A;
+	margin-right: 5px;
+}
+
+.firdaria_star {
+	color: #CD7F32;
+}
+
+.light_section {
+	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+	padding: 1.25em 1.5em;
+	margin: 0 0 1em 0;
+	border-radius: 1em;
+}
+
+/* Table */
+
+table {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+th {
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+	color: #333333;
+	padding: 0.875em 0.3125em;
+	text-align: center;
+	font-weight: 600;
+}
+
+td {
+	border-bottom: 1px dashed #CCCCCC;
+	padding: 0.875em 0;
+	text-align: center;
+}
+
+.layer {
+	border: 1px solid #FF6600;
+	border-top: none;
+	border-bottom: none;
+	width: 100%;
+	padding: 1.25em 1.75em;
+}
+
+.layerbtm {
+	border: 1px solid #FF6600;
+	border-top: none;
+	width: 100%;
+	padding: 1em 1.75em;
+}
+
+.active {
+	border: 1px solid #FF6600;
+	border-bottom: none;
+	border-top: 5px solid #FF6600;
+	color: #FF6600;
+	padding: 1.25em 0;
+	font-weight: 500;
+}
+
+.inactive {
+	border-top: 5px solid #CCCCCC;
+	border-left: 1px dashed #CCCCCC;
+	border-right: 1px dashed #CCCCCC;
+	border-bottom: 1px solid #FF6600;
+	background-color: #f3f3f3;
+	color: #333333;
+	padding: 1.25em 0;
+}
+
+#text_version {
+	width: 100%;
+	font-size: 0.75em;
+	color: #757575;
+	margin: 0.5em 0;
+}
+
+#html_version {
+	width: 100%;
+	font-size: 0.75em;
+	color: #757575;
+	margin: 0.5em 0;
+}
+
+.btn {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background: -moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background: -webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background: -o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background: -ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color: #ffffff;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	cursor: pointer;
+	color: #666666;
+	font-size: 14px;
+	padding: 10px;
+	text-decoration: none;
+	width: 180px;
+	height: 25x;
+	text-align: center;
+	margin: 1em 0;
+}
+
+.btn:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+	background: -moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background: -webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background: -o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background: -ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+	background-color: #f6f6f6;
+}
+
+.f_header {
+	margin: 1em 0 0 0;
+	padding: 0.875em 0.5em;
+	text-align: center;
+	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+	border-radius: 1em;
+}
+
+.f_content {
+	margin: 0;
+	padding: 1.25em 0.875em;
+	border-bottom: 1px dashed #CCCCCC;
+	display: none;
+	line-height: 2;
+}
+
+.f_sp {
+	margin: 0 1em;
+}
+
+.f_star {
+	color: #CD7F32;
+}
+</style>
+	
+
+<script>
+	function menuController() {
+		var menu = document.getElementById('menu');
+		if(menu.style.display === 'block') {
+			menu.style.display = 'none';
+		} else {
+			menu.style.display = 'block';
+		}
+	}
+</script>
+	
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9065033963757109" crossorigin="anonymous"></script>
+
+<script async src="https://fundingchoicesmessages.google.com/i/pub-9065033963757109?ers=1" nonce="BpX3u2JwB72nGV5dcRiPmQ"></script><script nonce="BpX3u2JwB72nGV5dcRiPmQ">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1631487-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-1631487-4');
+</script>
+
+	
+<script>
+	function showFirdaria(start) {
+		var end = parseInt(start) + 7;
+		for (var i=start; i<end; i++) {
+			document.getElementById("f"+i).style.display="block";
+		}
+	}
+	function hideFirdaria(start) {
+		var end = parseInt(start) + 7;
+		for (var i=start; i<end; i++) {
+			document.getElementById("f"+i).style.display="none";
+		}
+	}
+</script>
+	<script src="/include/js/chart_npm.js"></script>
+	<script>
+		var currentLayer = "cell1";
+		var currentDiv = "d1";
+
+		function showLayer(obj,div) {
+			if(currentLayer != obj.id) {
+				showIt(currentLayer, currentDiv, false);
+				currentLayer = obj.id;
+				currentDiv = div;
+				showIt(currentLayer, currentDiv, true);
+			}
+		}
+
+		function showIt(o,d,mode) {
+			var obj = document.getElementById(o);
+			var div = document.getElementById(d);
+			obj.className = mode ? "active" : "inactive";
+			div.style.display = mode ? "block" : "none";
+		}
+
+		function downFile() {
+			var form1 = document.getElementById('form1');
+			form1.target = "_blank";
+			form1.action = "downloadFile.jsp?address=1712292400770.png";
+			form1.submit();
+		}
+	</script>
+	<style>
+		.highlight {
+			border-left: 2px solid #FF6600;
+			padding: 0.75em 0 0.75em 0.75em;
+		}
+		.FA007A {
+			color: #FA007A;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="main">
+
+		
+
+<div id="header">
+	<div id="mobile_bar">
+		<div id="mobile_left"><a href="/index.jsp">占星之门</a></div>
+		<div id="mobile_right"><a href="https://astrodoor.cc/horoscope_result.jsp">繁</a>&nbsp;&nbsp;<a href="/search.jsp">🔍</a>&nbsp;&nbsp;<a href="javascript:menuController();" class="hamburger">☰</a></div>
+		<div id="mobile_clear"></div>
+	</div>
+	<div id="menu">
+		<ul class="nav">
+			<li><a href="/tool.jsp"><span class="nav_title">工具</span></a></li>
+			<li><a href="/horoscope.jsp">星座命盘</a></li>
+			<li><a href="/synastry.jsp">双人合盘</a></li>
+			<li><a href="/relocation.jsp">换置星盘</a></li>
+			<li><a href="/astrological_transits.jsp">行星过运</a></li>
+			<li><a href="/mercury_retrograde.jsp">水星逆行</a></li>
+			<li><a href="/myhoroscope.jsp">我的星盘</a></li>
+		</ul>
+		<ul class="nav">
+			<li><a href="/course/index.jsp"><span class="nav_title">课程</span></a></li>
+			<li><a href="/course/combo.jsp">合购85折</a></li>
+			<li><a href="https://reurl.cc/N4Mde5" target="_blank" rel="nofollow">填问卷抽牌卡</a></li>
+			<li><a href="/course/hahow.jsp">线上课程</a></li>
+			<li><a href="/article/classmate.jsp">实体课程</a></li>
+			<li><a href="/article/index.jsp">自学占星不求人</a></li>
+		</ul>
+		<ul class="nav">
+			<li><a href="/collection.jsp"><span class="nav_title">专题</span></a></li>
+			<li><a href="/new_moon.jsp">新月许愿</a></li>
+			<li><a href="/allgooday/index.jsp">开运占卜</a></li>
+			<li><a href="/article/decoration.jsp">开运方位</a></li>
+			<li><a href="/observe/index.jsp">自我觉察</a></li>
+		</ul>
+		<ul class="nav">
+			<li><a href="/consult.jsp"><span class="nav_title">谘询</span></a></li>
+			<li><a href="/consult/index.jsp">预约安格斯</a></li>
+			<li><a href="https://astroopen.com" target="_blank" rel="nofollow">开启占星公益谘询</a></li>
+		</ul>
+		<ul class="nav">
+			<li><a href="/subscribe.jsp"><span class="nav_title">订阅</span></a></li>
+			<li><a href="https://lin.ee/RJd5OXM" target="_blank">LINE</a>👍</li>
+			<li><a href="https://www.facebook.com/astrodoor" target="_blank">Facebook</a></li>
+			<li><a href="https://www.instagram.com/astrodoor" target="_blank">Instagram</a></li>
+			<li><a href="https://www.threads.net/@astrodoor" target="_blank">Threads</a></li>
+			<li><a href="https://www.weibo.com/astrodoor" target="_blank">Weibo</a></li>
+		</ul>
+	</div>
+</div>
+
+		<div id="content">
+
+			<div id="colOne">
+
+				<a href="https://astrodoor.cc/horoscope/1712292400770.png" target="_blank"><img src="https://astrodoor.cc/horoscope/1712292400770.png" id="imgout" alt="星座命盘" width="500" height="500" /></a><br/>
+
+				<h1>《占星之门星盘查询结果》</h1>
+
+				<h3>【订阅】新月许愿 LINE 通知</h3>
+				<p>“适合许愿的好星象，机会一旦错过，就要等很久很久才会再有。”安格斯强烈建议，点击下方按钮，把占星之门<a href="https://lin.ee/RJd5OXM" target="_blank">LINE 官方帐号</a>加入好友，才能确保您能收到每月固定的<a href="/new_moon.jsp" target="_blank">新月许愿</a>通知唷！</p>
+				<p><a href="https://lin.ee/RJd5OXM" target="_blank"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" height="40" border="0"></a></p>
+				
+				<h3>【公益】开启占星免费谘询</h3>
+				<p>如果您的人生正遭遇困难，经济不太宽裕，安格斯与开启占星的所有发心老师，固定每月一日 13:14，都会开放免费的公益谘询名额，欢迎预约与我们结善缘。<br/>👉 <a href="https://astroopen.com/index.jsp" target="_blank" rel="nofollow">预约开启占星公益谘询</a></p>
+
+
+				<p><span class="msg_star">ⓘ</span>请给我们服务您的机会，下次查询可以先登入<a href="/myhoroscope.jsp">我的星盘</a></p>
+
+				
+			</div> <!-- colOne -->
+
+			<div id="colTwo">
+
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="active" id="cell1" name="cell1" onmouseover="showLayer(this,'d1')">星位</td>
+						<td class="inactive" id="cell2" name="cell2" onmouseover="showLayer(this,'d2')">宫位</td>
+						<td class="inactive" id="cell3" name="cell3" onmouseover="showLayer(this,'d3')">相位</td>
+						<td class="inactive" id="cell4" name="cell4" onmouseover="showLayer(this,'d4')">上升</td>
+						<td class="inactive" id="cell5" name="cell5" onmouseover="showLayer(this,'d5')">运势</td>
+						<td class="inactive" id="cell9" name="cell9" onmouseover="showLayer(this,'d6')">课程</td>
+						<td class="inactive" id="cell6" name="cell6" onmouseover="showLayer(this,'d7')">统计</td>
+						<td class="inactive" id="cell7" name="cell7" onmouseover="showLayer(this,'d8')">进阶</td>
+						<td class="inactive" id="cell8" name="cell8" onmouseover="showLayer(this,'d9')">分享</td>
+					</tr>
+				</table>
+				
+				<div id="d1" class="layer">
+
+					<table>
+						<thead>
+							<tr>
+								<th>行星</th>
+								<th>星座</th>
+								<th>宫位</th>
+								<th>解释</th>
+							</tr>
+						</thead>
+						<tbody>
+<tr><td><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/capricorn.jsp" target="_blank">魔羯座 17°12'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫(疾厄宫)</a></td><td><a href="/exp/sun/house8.jsp" target="_blank">解释</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/aquarius.jsp" target="_blank">水瓶座 22°41'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫(官禄宫)</a></td><td><a href="/exp/moon/house10.jsp" target="_blank">解释</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座 27°28'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫(疾厄宫)</a></td><td><a href="/exp/mercury/house8.jsp" target="_blank">解释</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座  9°13'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫(夫妻宫)</a></td><td><a href="/exp/venus/house7.jsp" target="_blank">解释</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/mars.jsp" target="_blank">火星</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座 29° 9'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫(疾厄宫)</a></td><td><a href="/exp/mars/house8.jsp" target="_blank">解释</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a> ℞</td><td><a href="https://cn.astrodoor.cc/keyword/sign/virgo.jsp" target="_blank">处女座 14°30'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫(男女宫)</a></td><td><a href="/exp/jupiter/house5.jsp" target="_blank">解释</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/aquarius.jsp" target="_blank">水瓶座  6°41'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫(迁移宫)</a></td><td><a href="/exp/saturn/house9.jsp" target="_blank">解释</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/uranus.jsp" target="_blank">天王星</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/capricorn.jsp" target="_blank">魔羯座 14° 7'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫(疾厄宫)</a></td><td></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/neptune.jsp" target="_blank">海王星</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/capricorn.jsp" target="_blank">魔羯座 16°29'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫(疾厄宫)</a></td><td></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/pluto.jsp" target="_blank">冥王星</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/scorpio.jsp" target="_blank">天蝎座 22°18'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫(奴仆宫)</a></td><td></td></tr><tr><td>凱龍星 ℞</td><td><a href="https://cn.astrodoor.cc/keyword/sign/leo.jsp" target="_blank">狮子座  7°51'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/3.jsp" target="_blank">第3宫(兄弟宫)</a></td><td></td></tr><tr><td>婚神星</td><td><a href="https://cn.astrodoor.cc/keyword/sign/aquarius.jsp" target="_blank">水瓶座 19°23'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫(官禄宫)</a></td><td></td></tr><tr><td>智神星</td><td><a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座  9°26'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫(夫妻宫)</a></td><td></td></tr><tr><td>灶神星</td><td><a href="https://cn.astrodoor.cc/keyword/sign/virgo.jsp" target="_blank">处女座 24°43'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫(男女宫)</a></td><td></td></tr><tr><td>穀神星</td><td><a href="https://cn.astrodoor.cc/keyword/sign/capricorn.jsp" target="_blank">魔羯座  0°29'</a></td><td><a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫(疾厄宫)</a></td><td></td></tr>
+						</tbody>
+					</table>
+
+					<p><span class="msg_star">ⓘ</span> ℞ 代表逆行，详见 <a href="/article/planet_speed_retrograde.jsp" target="_blank">行星运行速度快慢与逆行</a></p>
+
+				</div> <!-- d1 -->
+
+				<div id="d2" class="layer" style="display:none;">
+
+					<p><span class="msg_star">ⓘ</span>占星以后天12宫位象征人生12种重要的生活领域，宫内星与<a href="/article/9.jsp" target="_blank">宫主星</a>都会影响宫位吉凶。此外，中世纪占星还发展出<a href="/article/almuten.jsp" target="_blank">宫神星</a>，运用复杂计算来决定哪颗星最能主宰该宫的吉凶。</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>宫位</th>
+								<th>宫始点</th>
+								<th>宫主星</th>
+								<th>宫神星</th>
+							</tr>
+						</thead>
+						<tbody>
+<tr><td><a href="https://cn.astrodoor.cc/keyword/house/1.jsp" target="_blank">第1宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/gemini.jsp" target="_blank">双子座  0° 7'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/gemini.jsp" target="_blank">双子座 25°13'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星 土星</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/3.jsp" target="_blank">第3宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/cancer.jsp" target="_blank">巨蟹座 17°13'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/4.jsp" target="_blank">第4宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/leo.jsp" target="_blank">狮子座 10°41'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/virgo.jsp" target="_blank">处女座  9°44'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/libra.jsp" target="_blank">天秤座 17°47'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座  0° 7'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座 25°13'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/capricorn.jsp" target="_blank">魔羯座 17°13'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/aquarius.jsp" target="_blank">水瓶座 10°41'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/11.jsp" target="_blank">第11宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/pisces.jsp" target="_blank">双鱼座  9°44'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/house/12.jsp" target="_blank">第12宫</a></td><td><a href="https://cn.astrodoor.cc/keyword/sign/aries.jsp" target="_blank">牡羊座 17°47'</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/mars.jsp" target="_blank">火星</a></td><td><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td></tr>
+						</tbody>
+					</table>
+				</div> <!-- d2 -->
+				
+				<div id="d3" class="layer" style="display:none;">
+
+					<p><span class="msg_star">ⓘ</span>行星之间会借由<a href="/keyword/aspect/aspect.jsp" target="_blank">相位</a>产生互动，若两星是吉相位，关系是友善的，若为凶相位，关系是紧张的。</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>行星A</th>
+								<th>行星B</th>
+								<th>相位</th>
+								<th>容许度</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">三分相 (120°)</a></td>
+								<td bgcolor="#FFFFFF">2.70°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/uranus.jsp" target="_blank">天王星</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#FFFFFF">3.09°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/neptune.jsp" target="_blank">海王星</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#FFFFFF">0.72°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/pluto.jsp" target="_blank">冥王星</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">六分相 (60°)</a></td>
+								<td bgcolor="#FFFFFF">5.09°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">北交点</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#FFFFFF">7.38°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td>
+								<td bgcolor="#FFFFFF">婚神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">十二分相 (30°)</a></td>
+								<td bgcolor="#FFFFFF">2.18°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td>
+								<td bgcolor="#FFFFFF">灶神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">三分相 (120°)</a></td>
+								<td bgcolor="#FFFFFF">7.51°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">上升(ASC)</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">八分之三相 (135°)</a></td>
+								<td bgcolor="#FFFFFF">2.08°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">六分相 (60°)</a></td>
+								<td bgcolor="#F3F3F3">4.78°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/pluto.jsp" target="_blank">冥王星</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">四分相 (90°)</a></td>
+								<td bgcolor="#F3F3F3">0.40°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">北交点</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">半四分相 (45°)</a></td>
+								<td bgcolor="#F3F3F3">2.14°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td>
+								<td bgcolor="#F3F3F3">婚神星</td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#F3F3F3">3.30°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td>
+								<td bgcolor="#F3F3F3">灶神星</td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">十二分之五相 (150°)</a></td>
+								<td bgcolor="#F3F3F3">2.02°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://en.wikipedia.org/wiki/Arabic_parts" target="_blank">幸运点</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">八分之三相 (135°)</a></td>
+								<td bgcolor="#F3F3F3">2.08°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/mars.jsp" target="_blank">火星</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#FFFFFF">1.67°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td>
+								<td bgcolor="#FFFFFF">灶神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">四分相 (90°)</a></td>
+								<td bgcolor="#FFFFFF">2.76°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td>
+								<td bgcolor="#FFFFFF">穀神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#FFFFFF">3.01°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">上升(ASC)</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">十二分之五相 (150°)</a></td>
+								<td bgcolor="#FFFFFF">2.65°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">天顶(MC)</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">半四分相 (45°)</a></td>
+								<td bgcolor="#FFFFFF">1.79°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">四分相 (90°)</a></td>
+								<td bgcolor="#F3F3F3">5.30°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">六分相 (60°)</a></td>
+								<td bgcolor="#F3F3F3">2.53°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">北交点</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">十二分相 (30°)</a></td>
+								<td bgcolor="#F3F3F3">0.62°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td>
+								<td bgcolor="#F3F3F3">凱龍星</td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">三分相 (120°)</a></td>
+								<td bgcolor="#F3F3F3">1.36°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td>
+								<td bgcolor="#F3F3F3">智神星</td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#F3F3F3">0.23°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">天顶(MC)</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">六分相 (60°)</a></td>
+								<td bgcolor="#F3F3F3">1.47°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/mars.jsp" target="_blank">火星</a></td>
+								<td bgcolor="#FFFFFF">灶神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">四分相 (90°)</a></td>
+								<td bgcolor="#FFFFFF">4.44°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/mars.jsp" target="_blank">火星</a></td>
+								<td bgcolor="#FFFFFF">穀神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#FFFFFF">1.34°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/mars.jsp" target="_blank">火星</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">上升(ASC)</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">十二分之五相 (150°)</a></td>
+								<td bgcolor="#FFFFFF">0.97°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/uranus.jsp" target="_blank">天王星</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">三分相 (120°)</a></td>
+								<td bgcolor="#F3F3F3">0.39°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/neptune.jsp" target="_blank">海王星</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">三分相 (120°)</a></td>
+								<td bgcolor="#F3F3F3">1.98°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">北交点</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">三分相 (120°)</a></td>
+								<td bgcolor="#F3F3F3">4.68°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td>
+								<td bgcolor="#F3F3F3">智神星</td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">四分相 (90°)</a></td>
+								<td bgcolor="#F3F3F3">5.07°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td>
+								<td bgcolor="#FFFFFF">凱龍星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">二分相 (180°)</a></td>
+								<td bgcolor="#FFFFFF">1.18°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td>
+								<td bgcolor="#FFFFFF">智神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">六分相 (60°)</a></td>
+								<td bgcolor="#FFFFFF">2.76°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">天顶(MC)</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#FFFFFF">4.01°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://en.wikipedia.org/wiki/Arabic_parts" target="_blank">幸运点</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">十二分之五相 (150°)</a></td>
+								<td bgcolor="#FFFFFF">1.07°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/uranus.jsp" target="_blank">天王星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/neptune.jsp" target="_blank">海王星</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#F3F3F3">2.38°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/uranus.jsp" target="_blank">天王星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">北交点</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#F3F3F3">4.29°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/uranus.jsp" target="_blank">天王星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">上升(ASC)</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">八分之三相 (135°)</a></td>
+								<td bgcolor="#F3F3F3">1.01°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/neptune.jsp" target="_blank">海王星</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/pluto.jsp" target="_blank">冥王星</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">六分相 (60°)</a></td>
+								<td bgcolor="#FFFFFF">5.80°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/neptune.jsp" target="_blank">海王星</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">北交点</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">合相 (0°)</a></td>
+								<td bgcolor="#FFFFFF">6.66°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/neptune.jsp" target="_blank">海王星</a></td>
+								<td bgcolor="#FFFFFF">婚神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">十二分相 (30°)</a></td>
+								<td bgcolor="#FFFFFF">2.90°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/keyword/planet/neptune.jsp" target="_blank">海王星</a></td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">上升(ASC)</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">八分之三相 (135°)</a></td>
+								<td bgcolor="#FFFFFF">1.37°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/pluto.jsp" target="_blank">冥王星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">北交点</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">半四分相 (45°)</a></td>
+								<td bgcolor="#F3F3F3">2.53°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/pluto.jsp" target="_blank">冥王星</a></td>
+								<td bgcolor="#F3F3F3">婚神星</td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">四分相 (90°)</a></td>
+								<td bgcolor="#F3F3F3">2.91°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/pluto.jsp" target="_blank">冥王星</a></td>
+								<td bgcolor="#F3F3F3">灶神星</td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">六分相 (60°)</a></td>
+								<td bgcolor="#F3F3F3">2.42°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/keyword/planet/pluto.jsp" target="_blank">冥王星</a></td>
+								<td bgcolor="#F3F3F3"><a href="https://en.wikipedia.org/wiki/Arabic_parts" target="_blank">幸运点</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">八分之三相 (135°)</a></td>
+								<td bgcolor="#F3F3F3">1.69°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF">凱龍星</td>
+								<td bgcolor="#FFFFFF">智神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">三分相 (120°)</a></td>
+								<td bgcolor="#FFFFFF">1.58°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF">凱龍星</td>
+								<td bgcolor="#FFFFFF">灶神星</td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">半四分相 (45°)</a></td>
+								<td bgcolor="#FFFFFF">1.86°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF">凱龍星</td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">天顶(MC)</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">二分相 (180°)</a></td>
+								<td bgcolor="#FFFFFF">2.83°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF">凱龍星</td>
+								<td bgcolor="#FFFFFF"><a href="https://en.wikipedia.org/wiki/Arabic_parts" target="_blank">幸运点</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">十二分相 (30°)</a></td>
+								<td bgcolor="#FFFFFF">2.25°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3">婚神星</td>
+								<td bgcolor="#F3F3F3"><a href="https://en.wikipedia.org/wiki/Arabic_parts" target="_blank">幸运点</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">八分之三相 (135°)</a></td>
+								<td bgcolor="#F3F3F3">1.22°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF">智神星</td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">天顶(MC)</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">六分相 (60°)</a></td>
+								<td bgcolor="#FFFFFF">1.24°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3">灶神星</td>
+								<td bgcolor="#F3F3F3">穀神星</td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">四分相 (90°)</a></td>
+								<td bgcolor="#F3F3F3">5.77°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#F3F3F3">灶神星</td>
+								<td bgcolor="#F3F3F3"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">天顶(MC)</a></td>
+								<td bgcolor="#F3F3F3"><a href="/keyword/aspect/aspect.jsp" target="_blank">八分之三相 (135°)</a></td>
+								<td bgcolor="#F3F3F3">0.97°</td>
+							</tr>
+
+							<tr>
+								<td bgcolor="#FFFFFF">穀神星</td>
+								<td bgcolor="#FFFFFF"><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">上升(ASC)</a></td>
+								<td bgcolor="#FFFFFF"><a href="/keyword/aspect/aspect.jsp" target="_blank">十二分之五相 (150°)</a></td>
+								<td bgcolor="#FFFFFF">0.36°</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div> <!-- d3 -->
+
+				<div id="d4" class="layer" style="display:none;">
+
+					<h3>四大尖轴</h3>
+
+					<p><span class="msg_star">ⓘ</span><a href="/article/10.jsp" target="_blank">四大尖轴</a>为星盘最重要的四个交点，分别象征生命(ASC)、婚姻(DES)、事业(MC)与家庭(IC)。</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>四大尖轴</th>
+								<th>星座位置</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">上升星座 (ASC)</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/sign/gemini.jsp" target="_blank">双子座  0° 7'</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">下降星座 (DES)</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座  0° 7'</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">天顶星座 (MC)</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/sign/aquarius.jsp" target="_blank">水瓶座 10°41'</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">天底星座 (IC)</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/sign/leo.jsp" target="_blank">狮子座 10°41'</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<br/>
+
+					<h3>交点</h3>
+
+					<p><span class="msg_star">ⓘ</span>星盘中还有很多重要的交点，它们都不是实际的行星，例如常听到的<a href="/article/10.jsp" target="_blank">南北交点</a>。下表的幸运点是透过特殊公式计算得到的希腊点，象征财富与幸福。</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>交点</th>
+								<th>所落星座</th>
+								<th>所落宫位</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">北交点</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/sign/capricorn.jsp" target="_blank">魔羯座  9°50'</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫(疾厄宫)</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">南交点</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/sign/cancer.jsp" target="_blank">巨蟹座 9°50'</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫(财帛宫)</a></td>
+							</tr>
+							<tr>
+								<td><a href="https://en.wikipedia.org/wiki/Arabic_parts" target="_blank">幸运点</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/sign/cancer.jsp" target="_blank">巨蟹座 5°36'</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫(财帛宫)</a></td>
+							</tr>
+							<tr>
+								<td>宿命点</td>
+								<td><a href="https://cn.astrodoor.cc/keyword/sign/libra.jsp" target="_blank">天秤座 28°50'</a></td>
+								<td><a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫(奴仆宫)</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div> <!-- d4 -->
+			
+				<div id="d5" class="layer" style="display:none;">
+
+				<p><span class="msg_star">ⓘ</span>法达星限法 (Firdãriã) 是古波斯占星家常用的流年大运系统，每 75 年为一个循环，分为 9 个大运（七曜+南北交点），七曜大运之中，又再细分为 7 个副运。<br/>👉 <a href="/article/firdaria.jsp" target="_blank">法达星限法专题介绍</a></p>
+
+				<div class="f_header">太陽大运 1992 ~<span class="f_sp">|</span><a href="javascript:showFirdaria('0');">OPEN</a><span class="f_sp">|</span><a href="javascript:hideFirdaria('0');">CLOSE</a></div>
+
+				<div class="f_content" id="f0">
+
+					<span class="msg_star">ⓘ</span>若想进一步探索太陽大运之中，每颗运势主星在星盘中所关联的人生主题与事项，请点击“运势宫位”的<span class="FA007A">宫位链结</span>看更多说明。<br/><br/>
+
+					0.0 歲 ~ 1.4 歲 (1992/01/08 ~ 1993/06/12)<br/>运势主星：太陽
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：太陽落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/4.jsp" target="_blank">第4宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f1">
+
+					1.4 歲 ~ 2.9 歲 (1993/06/13 ~ 1994/11/16)<br/>运势主星：太陽 / 金星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：金星落入<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f2">
+
+					2.9 歲 ~ 4.3 歲 (1994/11/17 ~ 1996/04/21)<br/>运势主星：太陽 / 水星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：水星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/1.jsp" target="_blank">第1宫</a> <a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫</a> <a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f3">
+
+					4.3 歲 ~ 5.7 歲 (1996/04/22 ~ 1997/09/25)<br/>运势主星：太陽 / 月亮
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：月亮落入<a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/3.jsp" target="_blank">第3宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f4">
+
+					5.7 歲 ~ 7.1 歲 (1997/09/26 ~ 1999/03/01)<br/>运势主星：太陽 / 土星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★
+					</span>
+
+					<br/>
+运势宫位：土星落入<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a> <a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f5">
+
+					7.2 歲 ~ 8.6 歲 (1999/03/02 ~ 2000/08/04)<br/>运势主星：太陽 / 木星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：木星落入<a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a> <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> <a href="https://cn.astrodoor.cc/keyword/house/11.jsp" target="_blank">第11宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f6">
+
+					8.6 歲 ~ 10.0 歲 (2000/08/05 ~ 2002/01/07)<br/>运势主星：太陽 / 火星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：火星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/12.jsp" target="_blank">第12宫</a> 
+
+				</div>
+
+				<div class="f_header">金星大运 2002 ~<span class="f_sp">|</span><a href="javascript:showFirdaria('7');">OPEN</a><span class="f_sp">|</span><a href="javascript:hideFirdaria('7');">CLOSE</a></div>
+
+				<div class="f_content" id="f7">
+
+					<span class="msg_star">ⓘ</span>若想进一步探索金星大运之中，每颗运势主星在星盘中所关联的人生主题与事项，请点击“运势宫位”的<span class="FA007A">宫位链结</span>看更多说明。<br/><br/>
+
+					10.0 歲 ~ 11.1 歲 (2002/01/08 ~ 2003/02/28)<br/>运势主星：金星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：金星落入<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f8">
+
+					11.2 歲 ~ 12.3 歲 (2003/03/01 ~ 2004/04/20)<br/>运势主星：金星 / 水星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：水星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/1.jsp" target="_blank">第1宫</a> <a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫</a> <a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f9">
+
+					12.3 歲 ~ 13.4 歲 (2004/04/21 ~ 2005/06/11)<br/>运势主星：金星 / 月亮
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：月亮落入<a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/3.jsp" target="_blank">第3宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f10">
+
+					13.4 歲 ~ 14.6 歲 (2005/06/12 ~ 2006/08/02)<br/>运势主星：金星 / 土星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★
+					</span>
+
+					<br/>
+运势宫位：土星落入<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a> <a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f11">
+
+					14.6 歲 ~ 15.7 歲 (2006/08/03 ~ 2007/09/23)<br/>运势主星：金星 / 木星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：木星落入<a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a> <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> <a href="https://cn.astrodoor.cc/keyword/house/11.jsp" target="_blank">第11宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f12">
+
+					15.7 歲 ~ 16.9 歲 (2007/09/24 ~ 2008/11/13)<br/>运势主星：金星 / 火星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：火星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/12.jsp" target="_blank">第12宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f13">
+
+					16.9 歲 ~ 18.0 歲 (2008/11/14 ~ 2010/01/07)<br/>运势主星：金星 / 太陽
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：太陽落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/4.jsp" target="_blank">第4宫</a> 
+
+				</div>
+
+				<div class="f_header">水星大运 2010 ~<span class="f_sp">|</span><a href="javascript:showFirdaria('14');">OPEN</a><span class="f_sp">|</span><a href="javascript:hideFirdaria('14');">CLOSE</a></div>
+
+				<div class="f_content" id="f14">
+
+					<span class="msg_star">ⓘ</span>若想进一步探索水星大运之中，每颗运势主星在星盘中所关联的人生主题与事项，请点击“运势宫位”的<span class="FA007A">宫位链结</span>看更多说明。<br/><br/>
+
+					18.0 歲 ~ 19.9 歲 (2010/01/08 ~ 2011/11/16)<br/>运势主星：水星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：水星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/1.jsp" target="_blank">第1宫</a> <a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫</a> <a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f15">
+
+					19.9 歲 ~ 21.7 歲 (2011/11/17 ~ 2013/09/24)<br/>运势主星：水星 / 月亮
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：月亮落入<a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/3.jsp" target="_blank">第3宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f16">
+
+					21.7 歲 ~ 23.6 歲 (2013/09/25 ~ 2015/08/03)<br/>运势主星：水星 / 土星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★
+					</span>
+
+					<br/>
+运势宫位：土星落入<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a> <a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f17">
+
+					23.6 歲 ~ 25.4 歲 (2015/08/04 ~ 2017/06/11)<br/>运势主星：水星 / 木星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：木星落入<a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a> <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> <a href="https://cn.astrodoor.cc/keyword/house/11.jsp" target="_blank">第11宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f18">
+
+					25.4 歲 ~ 27.3 歲 (2017/06/12 ~ 2019/04/20)<br/>运势主星：水星 / 火星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：火星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/12.jsp" target="_blank">第12宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f19">
+
+					27.3 歲 ~ 29.2 歲 (2019/04/21 ~ 2021/02/26)<br/>运势主星：水星 / 太陽
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：太陽落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/4.jsp" target="_blank">第4宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f20">
+
+					29.2 歲 ~ 31.0 歲 (2021/02/27 ~ 2023/01/07)<br/>运势主星：水星 / 金星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：金星落入<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫</a> 
+
+				</div>
+
+				<div class="f_header">月亮大运 2023 ~<span class="f_sp">|</span><a href="javascript:showFirdaria('21');">OPEN</a><span class="f_sp">|</span><a href="javascript:hideFirdaria('21');">CLOSE</a></div>
+
+				<div class="f_content" id="f21">
+
+					<span class="msg_star">ⓘ</span>若想进一步探索月亮大运之中，每颗运势主星在星盘中所关联的人生主题与事项，请点击“运势宫位”的<span class="FA007A">宫位链结</span>看更多说明。<br/><br/>
+
+					31.0 歲 ~ 32.3 歲 (2023/01/08 ~ 2024/04/21)<br/>运势主星：月亮
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：月亮落入<a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/3.jsp" target="_blank">第3宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f22">
+
+					32.3 歲 ~ 33.6 歲 (2024/04/22 ~ 2025/08/04)<br/>运势主星：月亮 / 土星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★★
+					</span>
+
+					<br/>
+运势宫位：土星落入<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a> <a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f23">
+
+					33.6 歲 ~ 34.9 歲 (2025/08/05 ~ 2026/11/17)<br/>运势主星：月亮 / 木星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：木星落入<a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a> <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> <a href="https://cn.astrodoor.cc/keyword/house/11.jsp" target="_blank">第11宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f24">
+
+					34.9 歲 ~ 36.2 歲 (2026/11/18 ~ 2028/03/01)<br/>运势主星：月亮 / 火星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：火星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/12.jsp" target="_blank">第12宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f25">
+
+					36.2 歲 ~ 37.5 歲 (2028/03/02 ~ 2029/06/14)<br/>运势主星：月亮 / 太陽
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：太陽落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/4.jsp" target="_blank">第4宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f26">
+
+					37.5 歲 ~ 38.7 歲 (2029/06/15 ~ 2030/09/27)<br/>运势主星：月亮 / 金星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：金星落入<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f27">
+
+					38.7 歲 ~ 40.0 歲 (2030/09/28 ~ 2032/01/07)<br/>运势主星：月亮 / 水星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：水星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/1.jsp" target="_blank">第1宫</a> <a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫</a> <a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a> 
+
+				</div>
+
+				<div class="f_header">土星大运 2032 ~<span class="f_sp">|</span><a href="javascript:showFirdaria('28');">OPEN</a><span class="f_sp">|</span><a href="javascript:hideFirdaria('28');">CLOSE</a></div>
+
+				<div class="f_content" id="f28">
+
+					<span class="msg_star">ⓘ</span>若想进一步探索土星大运之中，每颗运势主星在星盘中所关联的人生主题与事项，请点击“运势宫位”的<span class="FA007A">宫位链结</span>看更多说明。<br/><br/>
+
+					40.0 歲 ~ 41.6 歲 (2032/01/08 ~ 2033/08/03)<br/>运势主星：土星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★★
+					</span>
+
+					<br/>
+运势宫位：土星落入<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a> <a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f29">
+
+					41.6 歲 ~ 43.2 歲 (2033/08/04 ~ 2035/02/28)<br/>运势主星：土星 / 木星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★
+					</span>
+
+					<br/>
+运势宫位：木星落入<a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a> <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> <a href="https://cn.astrodoor.cc/keyword/house/11.jsp" target="_blank">第11宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f30">
+
+					43.2 歲 ~ 44.7 歲 (2035/03/01 ~ 2036/09/24)<br/>运势主星：土星 / 火星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：火星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/12.jsp" target="_blank">第12宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f31">
+
+					44.7 歲 ~ 46.3 歲 (2036/09/25 ~ 2038/04/21)<br/>运势主星：土星 / 太陽
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★
+					</span>
+
+					<br/>
+运势宫位：太陽落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/4.jsp" target="_blank">第4宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f32">
+
+					46.3 歲 ~ 47.9 歲 (2038/04/22 ~ 2039/11/16)<br/>运势主星：土星 / 金星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：金星落入<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f33">
+
+					47.9 歲 ~ 49.5 歲 (2039/11/17 ~ 2041/06/12)<br/>运势主星：土星 / 水星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：水星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/1.jsp" target="_blank">第1宫</a> <a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫</a> <a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f34">
+
+					49.5 歲 ~ 51.0 歲 (2041/06/13 ~ 2043/01/07)<br/>运势主星：土星 / 月亮
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★
+					</span>
+
+					<br/>
+运势宫位：月亮落入<a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/3.jsp" target="_blank">第3宫</a> 
+
+				</div>
+
+				<div class="f_header">木星大运 2043 ~<span class="f_sp">|</span><a href="javascript:showFirdaria('35');">OPEN</a><span class="f_sp">|</span><a href="javascript:hideFirdaria('35');">CLOSE</a></div>
+
+				<div class="f_content" id="f35">
+
+					<span class="msg_star">ⓘ</span>若想进一步探索木星大运之中，每颗运势主星在星盘中所关联的人生主题与事项，请点击“运势宫位”的<span class="FA007A">宫位链结</span>看更多说明。<br/><br/>
+
+					51.0 歲 ~ 52.7 歲 (2043/01/08 ~ 2044/09/24)<br/>运势主星：木星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：木星落入<a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a> <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> <a href="https://cn.astrodoor.cc/keyword/house/11.jsp" target="_blank">第11宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f36">
+
+					52.8 歲 ~ 54.5 歲 (2044/09/25 ~ 2046/06/12)<br/>运势主星：木星 / 火星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：火星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/12.jsp" target="_blank">第12宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f37">
+
+					54.5 歲 ~ 56.2 歲 (2046/06/13 ~ 2048/02/28)<br/>运势主星：木星 / 太陽
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：太陽落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/4.jsp" target="_blank">第4宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f38">
+
+					56.2 歲 ~ 57.9 歲 (2048/02/29 ~ 2049/11/15)<br/>运势主星：木星 / 金星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：金星落入<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f39">
+
+					57.9 歲 ~ 59.6 歲 (2049/11/16 ~ 2051/08/03)<br/>运势主星：木星 / 水星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：水星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/1.jsp" target="_blank">第1宫</a> <a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫</a> <a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f40">
+
+					59.6 歲 ~ 61.3 歲 (2051/08/04 ~ 2053/04/20)<br/>运势主星：木星 / 月亮
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★
+					</span>
+
+					<br/>
+运势宫位：月亮落入<a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/3.jsp" target="_blank">第3宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f41">
+
+					61.3 歲 ~ 63.0 歲 (2053/04/21 ~ 2055/01/07)<br/>运势主星：木星 / 土星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★
+					</span>
+
+					<br/>
+运势宫位：土星落入<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a> <a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a> 
+
+				</div>
+
+				<div class="f_header">火星大运 2055 ~<span class="f_sp">|</span><a href="javascript:showFirdaria('42');">OPEN</a><span class="f_sp">|</span><a href="javascript:hideFirdaria('42');">CLOSE</a></div>
+
+				<div class="f_content" id="f42">
+
+					<span class="msg_star">ⓘ</span>若想进一步探索火星大运之中，每颗运势主星在星盘中所关联的人生主题与事项，请点击“运势宫位”的<span class="FA007A">宫位链结</span>看更多说明。<br/><br/>
+
+					63.0 歲 ~ 64.0 歲 (2055/01/08 ~ 2056/01/07)<br/>运势主星：火星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：火星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/12.jsp" target="_blank">第12宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f43">
+
+					64.0 歲 ~ 65.0 歲 (2056/01/08 ~ 2057/01/06)<br/>运势主星：火星 / 太陽
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：太陽落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/4.jsp" target="_blank">第4宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f44">
+
+					65.0 歲 ~ 66.0 歲 (2057/01/07 ~ 2058/01/06)<br/>运势主星：火星 / 金星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：金星落入<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/6.jsp" target="_blank">第6宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f45">
+
+					66.0 歲 ~ 67.0 歲 (2058/01/07 ~ 2059/01/06)<br/>运势主星：火星 / 水星
+
+					<span class="f_sp">|</span><span class="f_star">
+★
+					</span>
+
+					<br/>
+运势宫位：水星落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/1.jsp" target="_blank">第1宫</a> <a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫</a> <a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f46">
+
+					67.0 歲 ~ 68.0 歲 (2059/01/07 ~ 2060/01/06)<br/>运势主星：火星 / 月亮
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：月亮落入<a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/3.jsp" target="_blank">第3宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f47">
+
+					68.0 歲 ~ 69.0 歲 (2060/01/07 ~ 2061/01/05)<br/>运势主星：火星 / 土星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★★★
+					</span>
+
+					<br/>
+运势宫位：土星落入<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a> <a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a> 
+
+				</div>
+
+				<div class="f_content" id="f48">
+
+					69.0 歲 ~ 70.0 歲 (2061/01/06 ~ 2062/01/07)<br/>运势主星：火星 / 木星
+
+					<span class="f_sp">|</span><span class="f_star">
+★★
+					</span>
+
+					<br/>
+运势宫位：木星落入<a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a>，主管<a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a> <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> <a href="https://cn.astrodoor.cc/keyword/house/11.jsp" target="_blank">第11宫</a> 
+
+				</div>
+
+				<div class="f_header">交點大运 2062 ~<span class="f_sp">|</span><a href="javascript:showFirdaria('49');">OPEN</a><span class="f_sp">|</span><a href="javascript:hideFirdaria('49');">CLOSE</a></div>
+
+				<div class="f_content" id="f49">
+
+					<span class="msg_star">ⓘ</span>若想进一步探索交點大运之中，每颗运势主星在星盘中所关联的人生主题与事项，请点击“运势宫位”的<span class="FA007A">宫位链结</span>看更多说明。<br/><br/>
+
+					70.0 歲 ~ 73.0 歲 (2062/01/08 ~ 2065/01/07)<br/>运势主星：北交點
+
+					<br/>
+运势宫位：北交點落入<a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a>
+
+				</div>
+
+				<div class="f_content" id="f50">
+
+					73.1 歲 ~ 75.0 歲 (2065/01/08 ~ 2067/01/07)<br/>运势主星：南交點
+
+					<br/>
+运势宫位：南交點落入<a href="https://cn.astrodoor.cc/keyword/house/2.jsp" target="_blank">第2宫</a>
+
+				</div>
+
+				</div> <!-- d5 -->
+
+				<div id="d6" class="layer" style="display:none;">
+
+
+
+					<p><span class="msg_star">ⓘ</span>下表是<a href="/angus.jsp" target="_blank">安格斯</a>线上课程“<a href="https://hahow.in/cr/astrodoor" target="_blank" rel="nofollow" title="占星之门安格斯｜十二宫位找出人生攻略">十二宫位找出人生攻略</a>”专用的“<strong>行星强弱评量表</strong>”，可帮助您找出适合发展的领域与优势。<br/>👉 <a href="/course/combo.jsp" target="_blank">星盘＋合盘经典课程两堂合购 85 折</a></p>
+
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2" width="40%">行星先天状态</th>
+								<th colspan="2" width="60%">后天宫位状态</th>
+							</tr>
+							<tr>
+								<th width="20%">行星</th>
+								<th width="20%">吉凶</th>
+								<th width="20%">入宫</th>
+								<th width="40%">管宫</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>日</td>
+								<td>吉+</td>
+								<td>果(9) </td>
+								<td>
+吉(4) 
+								</td>
+							</tr>
+							<tr>
+								<td>月</td>
+								<td>吉-</td>
+								<td>始(10) </td>
+								<td>
+中(3) 
+								</td>
+							</tr>
+							<tr>
+								<td>水</td>
+								<td>中+</td>
+								<td>续(8) </td>
+								<td>
+吉(1) 中(2) 吉(5) 
+								</td>
+							</tr>
+							<tr>
+								<td>金</td>
+								<td>吉-</td>
+								<td>始(7) </td>
+								<td>
+凶(6) 凶(12) 
+								</td>
+							</tr>
+							<tr>
+								<td>火</td>
+								<td>凶+</td>
+								<td>续(8) </td>
+								<td>
+凶(6) 凶(12) 
+								</td>
+							</tr>
+							<tr>
+								<td>木</td>
+								<td>吉+</td>
+								<td>续(5) </td>
+								<td>
+吉(7) 凶(8) 吉(11) 
+								</td>
+							</tr>
+							<tr>
+								<td>土</td>
+								<td>凶-</td>
+								<td>始(10) </td>
+								<td>
+吉(9) 吉(10) 
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div> <!-- d6 -->
+
+				<div id="d7" class="layer" style="display:none;">
+
+					<h3>十二星座比例</h3>
+
+					<p><span class="msg_star">ⓘ</span>星盘中有那么多颗星，究竟哪些星座比较能够代表我的个性呢？详见<a href="/article/43.jsp" target="_blank">十二星座比例的计算原理</a>。</p>
+
+					<canvas id="12signbar"></canvas>
+					<script>
+						var ctx1 = document.getElementById('12signbar').getContext('2d');
+						var chart1 = new Chart(ctx1, {
+							type: 'bar',
+							data: {
+								labels: ["牡羊", "金牛", "双子", "巨蟹", "狮子", "处女", "天秤", "天蝎", "射手", "摩羯", "水瓶", "双鱼"],
+								datasets: [{
+									label: '十二星座比例',
+									data: [0, 0, 20, 3, 0, 2, 0, 1, 30, 22, 22, 0],
+									backgroundColor: [
+										'rgba(255, 99, 132, 0.2)',
+										'rgba(255, 206, 86, 0.2)',
+										'rgba(75, 192, 192, 0.2)',
+										'rgba(54, 162, 235, 0.2)',
+										'rgba(255, 99, 132, 0.2)',
+										'rgba(255, 206, 86, 0.2)',
+										'rgba(75, 192, 192, 0.2)',
+										'rgba(54, 162, 235, 0.2)',
+										'rgba(255, 99, 132, 0.2)',
+										'rgba(255, 206, 86, 0.2)',
+										'rgba(75, 192, 192, 0.2)',
+										'rgba(54, 162, 235, 0.2)',
+									],
+									borderColor: [
+										'rgba(255, 99, 132, 1)',
+										'rgba(255, 206, 86, 1)',
+										'rgba(75, 192, 192, 1)',
+										'rgba(54, 162, 235, 1)',
+										'rgba(255, 99, 132, 1)',
+										'rgba(255, 206, 86, 1)',
+										'rgba(75, 192, 192, 1)',
+										'rgba(54, 162, 235, 1)',
+										'rgba(255, 99, 132, 1)',
+										'rgba(255, 206, 86, 1)',
+										'rgba(75, 192, 192, 1)',
+										'rgba(54, 162, 235, 1)',
+									],
+									borderWidth: 1
+								}]
+							}
+						});
+					</script>
+					<br/>
+
+					<h3>三方星座比例</h3>
+
+					<p><span class="msg_star">ⓘ</span>当星盘某一元素比例特别高时，代表该元素所象征的特质将会特别凸显，详见<a href="/exp/triplicities.jsp" target="_blank">三方星座比例分析</a>。</p>
+
+					<canvas id="triplicitiesbar"></canvas>
+					<script>
+						var ctx2 = document.getElementById('triplicitiesbar').getContext('2d');
+						var chart2 = new Chart(ctx2, {
+							type: 'doughnut',
+							data: {
+								labels: ["火象", "土象", "风象", "水象"],
+								datasets: [{
+									label: '三方星座比例',
+									data: [25, 33, 33, 8],
+									backgroundColor: [
+										'rgba(255, 99, 132, 0.2)',
+										'rgba(255, 206, 86, 0.2)',
+										'rgba(75, 192, 192, 0.2)',
+										'rgba(54, 162, 235, 0.2)',
+									],
+									borderColor: [
+										'rgba(255, 99, 132, 1)',
+										'rgba(255, 206, 86, 1)',
+										'rgba(75, 192, 192, 1)',
+										'rgba(54, 162, 235, 1)',
+									],
+									borderWidth: 1
+								}]
+							}
+						});
+					</script>
+					<br/>
+
+					<h3>四正星座比例</h3>
+
+					<p><span class="msg_star">ⓘ</span>当星盘中某一四正比例特别高时，代表该类别所象征的特质将会特别凸显，详见<a href="/exp/quadruplicities.jsp" target="_blank">四正星座比例分析</a>。</p>
+
+					<canvas id="quadruplicitiesbar"></canvas>
+					<script>
+						var ctx3 = document.getElementById('quadruplicitiesbar').getContext('2d');
+						var chart3 = new Chart(ctx3, {
+							type: 'doughnut',
+							data: {
+								labels: ["基本", "固定", "变动"],
+								datasets: [{
+									label: '四正星座比例',
+									data: [25, 33, 41],
+									backgroundColor: [
+										'rgba(255, 99, 132, 0.2)',
+										'rgba(255, 206, 86, 0.2)',
+										'rgba(54, 162, 235, 0.2)',
+									],
+									borderColor: [
+										'rgba(255, 99, 132, 1)',
+										'rgba(255, 206, 86, 1)',
+										'rgba(54, 162, 235, 1)',
+									],
+									borderWidth: 1
+								}]
+							}
+						});
+					</script>
+				</div> <!-- d7 -->
+
+				<div id="d8" class="layer" style="display:none;">
+
+					<h3>行星的本体之力</h3>
+
+					<p><span class="msg_star">ⓘ</span>古占评估星体的先天力量有五种尊贵（庙、旺、三分、界、外观）与三种无力（陷、弱、外来）。</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>行星</th>
+								<th>庙</th>
+								<th>旺</th>
+								<th>三分</th>
+								<th>界</th>
+								<th>外观</th>
+								<th>陷</th>
+								<th>弱</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>月</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>水</td>
+								<td>-</td>
+							</tr>
+
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/keyword/planet/mars.jsp" target="_blank">火星</a></td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>火</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>木</td>
+								<td>-</td>
+							</tr>
+
+							<tr>
+								<td><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td>
+								<td>土</td>
+								<td>-</td>
+								<td>土<sup>1</sup></td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+								<td>-</td>
+							</tr>
+
+						</tbody>
+					</table>
+					<p><span class="msg_star">ⓘ</span>上表若某星全部都是“-”即表示该星状态为外来的 (Peregrine)</p>
+					<p><span class="msg_star">ⓘ</span>上表三分栏位中的行星上标数字为昼夜区分下的三分性顺序</p>
+					<br/>
+
+					<h3>星体的更多判断</h3>
+
+					<p><span class="msg_star">ⓘ</span>学习如何解读下表请至<a href="/article/traditional_astrology.jsp" target="_blank">古典占星</a>专区，您也可以点击表格内的链结，直接跳到对应的解释文。</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>行星</th>
+								<th>速度</th>
+								<th>距日</th>
+								<th>东/西</th>
+								<th>喜乐</th>
+								<th>区分</th>
+							</tr>
+						</thead>
+						<tbody>
+
+<tr><td><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a></td><td><a href="/article/planet_speed_retrograde.jsp" target="_blank">快</a></td><td><a href="/article/cazimi_combust_sunbeams.jsp" target="_blank">-</a></td><td><a href="/article/planet_oriental_occidental.jsp" target="_blank">-</a></td><td><a href="/article/planetary_joys.jsp" target="_blank">-</a></td><td><a href="/article/planetary_sect.jsp" target="_blank">-</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a></td><td><a href="/article/planet_speed_retrograde.jsp" target="_blank">慢</a></td><td><a href="/article/cazimi_combust_sunbeams.jsp" target="_blank">-</a></td><td><a href="/article/planet_oriental_occidental.jsp" target="_blank">-</a></td><td><a href="/article/planetary_joys.jsp" target="_blank">-</a></td><td><a href="/article/planetary_sect.jsp" target="_blank">区分外</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a></td><td><a href="/article/planet_speed_retrograde.jsp" target="_blank">平均</a></td><td><a href="/article/cazimi_combust_sunbeams.jsp" target="_blank">-</a></td><td><a href="/article/planet_oriental_occidental.jsp" target="_blank">东出</a></td><td><a href="/article/planetary_joys.jsp" target="_blank">-</a></td><td><a href="/article/planetary_sect.jsp" target="_blank">区分內</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a></td><td><a href="/article/planet_speed_retrograde.jsp" target="_blank">快</a></td><td><a href="/article/cazimi_combust_sunbeams.jsp" target="_blank">-</a></td><td><a href="/article/planet_oriental_occidental.jsp" target="_blank">东出</a></td><td><a href="/article/planetary_joys.jsp" target="_blank">-</a></td><td><a href="/article/planetary_sect.jsp" target="_blank">区分外</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/mars.jsp" target="_blank">火星</a></td><td><a href="/article/planet_speed_retrograde.jsp" target="_blank">快</a></td><td><a href="/article/cazimi_combust_sunbeams.jsp" target="_blank">-</a></td><td><a href="/article/planet_oriental_occidental.jsp" target="_blank">东出</a></td><td><a href="/article/planetary_joys.jsp" target="_blank">-</a></td><td><a href="/article/planetary_sect.jsp" target="_blank">区分外</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a></td><td><a href="/article/planet_speed_retrograde.jsp" target="_blank">逆行</a></td><td><a href="/article/cazimi_combust_sunbeams.jsp" target="_blank">-</a></td><td><a href="/article/planet_oriental_occidental.jsp" target="_blank">-</a></td><td><a href="/article/planetary_joys.jsp" target="_blank">-</a></td><td><a href="/article/planetary_sect.jsp" target="_blank">-</a></td></tr><tr><td><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a></td><td><a href="/article/planet_speed_retrograde.jsp" target="_blank">快</a></td><td><a href="/article/cazimi_combust_sunbeams.jsp" target="_blank">-</a></td><td><a href="/article/planet_oriental_occidental.jsp" target="_blank">西入</a></td><td><a href="/article/planetary_joys.jsp" target="_blank">-</a></td><td><a href="/article/planetary_sect.jsp" target="_blank">区分內</a></td></tr>
+						</tbody>
+					</table>
+					<br/>
+
+
+			        <h3>庙旺互容</h3>
+
+					<p><span class="msg_star">ⓘ</span>当两星各自落入彼此主管的黄道宫位，就称为互容(Mutual Reception)。</p>
+
+			        <table>
+			          <thead>
+			            <tr>
+			              <th>行星</th>
+			              <th>行星</th>
+			              <th>互容关系</th>
+			            </tr>
+			          </thead>
+			          <tbody>
+			            <tr><td>水星</td><td>木星</td><td>庙宫互容</td></tr>
+			            <tr><td>水星</td><td>木星</td><td>庙旺互容</td></tr>
+			            
+			          </tbody>
+			        </table>
+					<br/>
+
+					<h3>开运方位</h3>
+
+					<p><span class="msg_star">ⓘ</span>请先阅读<a href="/article/decoration.jsp" target="_blank">开运风水：占星与居家布置的相遇</a>。</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>方位类型</th>
+								<th>第一方位角</th>
+								<th>第二方位角</th>
+								<th>开运说明</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>桃花方位</td>
+								<td>239°</td>
+								<td>59°</td>
+								<td><a href="/article/venus_azimuth.jsp" target="_blank">开运说明</a></td>
+							</tr>
+							<tr>
+								<td>财运方位</td>
+								<td>316°</td>
+								<td>136°</td>
+								<td><a href="/article/jupiter_azimuth.jsp" target="_blank">开运说明</a></td>
+							</tr>
+							<tr>
+								<td>名望方位</td>
+								<td>205°</td>
+								<td>25°</td>
+								<td><a href="/article/sun_azimuth.jsp" target="_blank">开运说明</a></td>
+							</tr>
+							<tr>
+								<td>人缘方位</td>
+								<td>165°</td>
+								<td>345°</td>
+								<td><a href="/article/moon_azimuth.jsp" target="_blank">开运说明</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div> <!-- d8 -->
+
+				<div id="d9" class="layer" style="display:none;">
+
+					<p>我们制作了两种格式的分享文，方便您直接复制，转贴到社交平台或部落格，与朋友分享您的星座。而且，图档也帮您准备好了，点击“下载星盘”按钮就可以把星盘带回家喔！</p>
+
+					<button class="btn" onclick="downFile()">下载星盘</button><br/>
+
+					<p><span class="msg_star">【纯文字版】</span>适合转贴到 FB, IG, Twitter</p>
+					<textarea id="text_version" rows="6" cols="45" readonly>★ 占星之門星座命盤查詢結果 ★
+
+  上升：双子座
+  太陽：魔羯座 / 第8宮
+  月亮：水瓶座 / 第10宮
+  水星：射手座 / 第8宮
+  金星：射手座 / 第7宮
+  火星：射手座 / 第8宮
+  木星：处女座 / 第5宮
+  土星：水瓶座 / 第9宮
+
+★ 星盤中比例最高的星座 ★
+
+  雙子座：20%
+  射手座：30%
+  魔羯座：22%
+  水瓶座：22%
+
+★ 地火風水星座比例 ★
+
+  火象星座：25%
+  土象星座：33.33%
+  風象星座：33.33%
+  水象星座：8.33%
+
+★ 基本、固定、變動星座比例 ★
+
+  基本星座：25%
+  固定星座：33.33%
+  變動星座：41.67%
+
+資料來源：https://astrodoor.cc/horoscope.jsp</textarea>
+					<button class="btn" data-clipboard-action="copy" data-clipboard-target="#text_version">复制纯文字版</button><br/>
+
+					<p><span class="msg_star">【HTML 代码版】</span>适合转贴到部落格或网站后台</p>
+					<textarea id="html_version" rows="6" cols="45" readonly>★ 占星之門星座命盤查詢結果 ★<br/><ul><li><a href="https://cn.astrodoor.cc/article/10.jsp" target="_blank">上升</a>：<a href="https://cn.astrodoor.cc/keyword/sign/gemini.jsp" target="_blank">双子座</a></li><li><a href="https://cn.astrodoor.cc/keyword/planet/sun.jsp" target="_blank">太阳</a>：<a href="https://cn.astrodoor.cc/keyword/sign/capricorn.jsp" target="_blank">魔羯座</a> / <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> 👉 <a href="https://astrodoor.cc/exp/sun/house8.jsp" target="_blank">看解釋</a></li><li><a href="https://cn.astrodoor.cc/keyword/planet/moon.jsp" target="_blank">月亮</a>：<a href="https://cn.astrodoor.cc/keyword/sign/aquarius.jsp" target="_blank">水瓶座</a> / <a href="https://cn.astrodoor.cc/keyword/house/10.jsp" target="_blank">第10宫</a> 👉 <a href="https://astrodoor.cc/exp/moon/house10.jsp" target="_blank">看解釋</a></li><li><a href="https://cn.astrodoor.cc/keyword/planet/mercury.jsp" target="_blank">水星</a>：<a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座</a> / <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> 👉 <a href="https://astrodoor.cc/exp/mercury/house8.jsp" target="_blank">看解釋</a></li><li><a href="https://cn.astrodoor.cc/keyword/planet/venus.jsp" target="_blank">金星</a>：<a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座</a> / <a href="https://cn.astrodoor.cc/keyword/house/7.jsp" target="_blank">第7宫</a> 👉 <a href="https://astrodoor.cc/exp/venus/house7.jsp" target="_blank">看解釋</a></li><li><a href="https://cn.astrodoor.cc/keyword/planet/mars.jsp" target="_blank">火星</a>：<a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座</a> / <a href="https://cn.astrodoor.cc/keyword/house/8.jsp" target="_blank">第8宫</a> 👉 <a href="https://astrodoor.cc/exp/mars/house8.jsp" target="_blank">看解釋</a></li><li><a href="https://cn.astrodoor.cc/keyword/planet/jupiter.jsp" target="_blank">木星</a>：<a href="https://cn.astrodoor.cc/keyword/sign/virgo.jsp" target="_blank">处女座</a> / <a href="https://cn.astrodoor.cc/keyword/house/5.jsp" target="_blank">第5宫</a> 👉 <a href="https://astrodoor.cc/exp/jupiter/house5.jsp" target="_blank">看解釋</a></li><li><a href="https://cn.astrodoor.cc/keyword/planet/saturn.jsp" target="_blank">土星</a>：<a href="https://cn.astrodoor.cc/keyword/sign/aquarius.jsp" target="_blank">水瓶座</a> / <a href="https://cn.astrodoor.cc/keyword/house/9.jsp" target="_blank">第9宫</a> 👉 <a href="https://astrodoor.cc/exp/saturn/house9.jsp" target="_blank">看解釋</a></li></ul><br/>★ 星盤中比例最高的星座 ★<br/><ul><li>雙子座：20%</li><li><a href="https://cn.astrodoor.cc/keyword/sign/sagittarius.jsp" target="_blank">射手座</a>：30%</li><li><a href="https://cn.astrodoor.cc/keyword/sign/capricorn.jsp" target="_blank">魔羯座</a>：22%</li><li><a href="https://cn.astrodoor.cc/keyword/sign/aquarius.jsp" target="_blank">水瓶座</a>：22%</li></ul><br/>★ 地火風水星座比例 ★<br/><ul><li>火象星座：25%</li><li>土象星座：33.33%</li><li>風象星座：33.33%</li><li>水象星座：8.33%</li></ul><br/>★ 基本、固定、變動星座比例 ★<br/><ul><li>基本星座：25%</li><li>固定星座：33.33%</li><li>變動星座：41.67%</li></ul><br/>資料來源：<a href="https://astrodoor.cc">占星之門</a> - 查詢<a href="https://astrodoor.cc/keyword/sign.jsp">星座</a>與個人<a href="https://astrodoor.cc/horoscope.jsp">星盤</a>的好朋友～</textarea>
+					<button class="btn" data-clipboard-action="copy" data-clipboard-target="#html_version">复制 HTML 代码版</button><br/>
+
+					<script src="/include/js/clipboard.min.js"></script>
+					<script>
+						var clipboard = new Clipboard('.btn');
+
+						clipboard.on('success', function(e) {
+							console.log(e);
+							alert('YA!!! 复制成功，您可以转贴到其它地方跟朋友分享了！');
+						});
+
+						clipboard.on('error', function(e) {
+							console.log(e);
+							alert('Oops!!! 复制失败，请自行手动复制。教学：点一下框框里面的内容 ➔ 长按着内容 ➔ 全选 ➔ 拷贝 ➔ 转贴到你想去的地方');
+						});
+					</script>
+
+				</div> <!-- d9 -->
+
+				<div class="layerbtm">
+					<div class="light_section">
+						<p><strong>💡 自学占星：古典占星学习资源</strong></p>
+						<p>您可以先阅读<a href="/article/index.jsp">【超完整】自学占星不求人</a>，如果想更深入学习，<a href="/angus.jsp">安格斯</a>有以下两门线上课程：</p>
+						<p>1. <a href="https://hahow.in/cr/astrodoor" target="_blank" rel="nofollow" title="占星之门安格斯｜十二宫位找出人生攻略">十二宫位找出人生攻略</a><br/>2. <a href="https://hahow.in/cr/astrodoor2" target="_blank" rel="nofollow" title="占星之门安格斯｜双人合盘探索人际关系">双人合盘探索人际关系</a></p>
+						<p>课程均有免费开放单元，点击上方课名，进入课程网页，<strong>先用 FB 或 Google 帐号登入</strong>，即可免费观看。</p>
+						<p class="FA007A">👇 两课合购 85 折限时优惠中 👇</p>
+						<p><a href="/hahow/combo.jsp"><img src="/images/combo3.jpg" alt="占星之门安格斯｜经典课程两堂合购 85 折" /></a></p>
+					</div>
+				</div>
+
+			</div> <!-- colTwo -->
+
+		</div> <!-- content -->
+
+		
+<div style="clear:both;"></div>
+<div id="footer">
+	<p>Astrodoor © 2007-present. All rights reserved.</p>
+	<ul>
+		<li><a href="/privacy.jsp">Privacy Policy</a></li>
+		<li><a href="/tos.jsp">Terms of Service</a></li>
+		<li><a href="/article/api.jsp">Open Data (API)</a></li>
+	</ul>
+</div>
+
+	</div> <!-- main -->
+
+	
+	<form id="form1" name="form1" method="post"></form>
+
+</body>
+</html>
